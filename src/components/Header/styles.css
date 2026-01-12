@@ -1,15 +1,15 @@
-.navbar{
-    background-color: var(--theme);
-    padding: 0.5rem 1.5rem;
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+.navbar {
+  background-color: var(--theme);
+  padding: 0.5rem 1.5rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;   
 }
+
 
 .logo{
     color:var(--white);
@@ -28,4 +28,39 @@
 .link:hover{
     opacity: 1;
     transition:all 0.3s
+}
+
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 70%;          
+  overflow: hidden;
+}
+
+
+.welcome-text {
+  color: yellow;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.user-img {
+  border-radius: 50%;
+  height: 1.8rem;
+  width: 1.8rem;
+  object-fit: cover;
+}
+.user-img:hover {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+.user-name {
+  color: var(--white);
+  font-weight: 500;
+  white-space: nowrap;
 }

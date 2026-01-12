@@ -34,41 +34,70 @@ function Header() {
     "User";
 
   return (
-    <div className="navbar">
-      <p className="logo">Financely.</p>
+    // <div className="navbar">
+    //   <p className="logo">Financely.</p>
 
-      {user && !loading && (
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "1rem",
-          }}
-        >
+    //   {user && !loading && (
+    //     <div
+    //       style={{
+    //         display: "flex",
+    //         alignItems: "center",
+    //         gap: "1rem",
+    //       }}
+    //     >
         
-          <p style={{ marginRight:"900px",fontWeight: "500", color:"yellow" }}>
-            Hi, Welcome back <b>{userName}</b> 
-          </p>
+    //       <p style={{ marginRight:"900px",fontWeight: "500", color:"yellow" }}>
+    //         Hi, Welcome back <b>{userName}</b> 
+    //       </p>
 
 
-          <img
-            src={user?.photoURL ||userImg}
-            alt="user"
-            referrerPolicy="no-referrer"
-            style={{
-              borderRadius: "50%",
-              height: "1.8rem",
-              width: "1.8rem",
-              objectFit: "cover",
-            }}
-          />
+    //       <img
+    //         src={user?.photoURL ||userImg}
+    //         alt="user"
+    //         referrerPolicy="no-referrer"
+    //         style={{
+    //           borderRadius: "50%",
+    //           height: "1.8rem",
+    //           width: "1.8rem",
+    //           objectFit: "cover",
+    //         }}
+    //       />
 
-          <p className="logo link" onClick={logoutFnc}>
-            Logout
-          </p>
-        </div>
-      )}
+    //       <p className="logo link" onClick={logoutFnc}>
+    //         Logout
+    //       </p>
+    //     </div>
+    //   )}
+    // </div>
+    
+
+
+
+
+
+  <div className="navbar">
+  <p className="logo">Financely.</p>
+
+  {user && !loading && (
+    <div className="nav-right">
+      <p className="welcome-text">
+        Hi, Welcome back <b>{userName}</b>
+      </p>
+
+      <img
+        src={user?.photoURL || userImg}
+        alt="user"
+        className="user-img"
+      />
+
+      <p className="logo link" onClick={logoutFnc}>
+        Logout
+      </p>
     </div>
+  )}
+</div>
+
+  
   );
 }
 
