@@ -11,7 +11,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { signOut } from "firebase/auth";
-import userImg from "../../../public/house.png";
+import userImg from "../../assets/house.png";
 
 function Header() {
   const [user, loading] = useAuthState(auth);
@@ -27,7 +27,7 @@ function Header() {
     }
   };
 
-  // ✅ USER NAME LOGIC
+  
   const userName =
     user?.displayName ||
     user?.email?.split("@")[0] ||
@@ -45,12 +45,12 @@ function Header() {
             gap: "1rem",
           }}
         >
-          {/* ✅ Welcome Text */}
+        
           <p style={{ marginRight:"900px",fontWeight: "500", color:"yellow" }}>
-            Hi, Welcome back <b>{userName}</b> 👋
+            Hi, Welcome back <b>{userName}</b> 
           </p>
 
-          {/* ✅ User Image */}
+
           <img
             src={user?.photoURL ||userImg}
             alt="user"

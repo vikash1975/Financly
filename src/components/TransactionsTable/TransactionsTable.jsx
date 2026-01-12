@@ -20,21 +20,21 @@ function TransactionsTable({ transactions, setTransactions }) {
     { title: "Date", dataIndex: "date", key: "date" },
   ];
 
-  // 🔍 Filter
+  //  Filter
   const filteredTransactions = transactions.filter(
     (item) =>
       item.name.toLowerCase().includes(search.toLowerCase()) &&
       (typeFilter === "all" || item.type === typeFilter)
   );
 
-  // 🔃 Sort
+  //  Sort
   const sortedTransactions = [...filteredTransactions].sort((a, b) => {
     if (sortKey === "date") return new Date(a.date) - new Date(b.date);
     if (sortKey === "amount") return a.amount - b.amount;
     return 0;
   });
 
-  // 📤 Export CSV
+  //  Export CSV
   function exportCSV() {
     const csv = unparse({
       fields: ["name", "type", "tag", "date", "amount"],
@@ -52,7 +52,7 @@ function TransactionsTable({ transactions, setTransactions }) {
     document.body.removeChild(link);
   }
 
-  // 📥 Import CSV
+  //  Import CSV
   function importFromCSV(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -116,7 +116,7 @@ function TransactionsTable({ transactions, setTransactions }) {
         >
           <h2 style={{ margin: 0 }}>My Transactions</h2>
 
-          {/* ✅ CENTERED SORT */}
+        
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Radio.Group
               className="input-radio"

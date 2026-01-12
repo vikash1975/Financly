@@ -52,7 +52,7 @@ function AddIncomeModal({
           <DatePicker style={{ width: "100%" }} />
         </Form.Item>
 
-        {/* Category */}
+        
         <Form.Item
           label="Category"
           name="category"
@@ -66,8 +66,7 @@ function AddIncomeModal({
           </Select>
         </Form.Item>
 
-        {/* Button */}
-        <Button type="primary" htmlType="submit" block>
+         <Button type="primary" htmlType="submit" block>
           Add Income
         </Button>
       </Form>

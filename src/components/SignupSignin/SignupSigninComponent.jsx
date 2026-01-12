@@ -31,7 +31,7 @@ function SignupSigninComponent() {
       if(password==confirmPassword){
     createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
-    // Signed up 
+    
     const user = userCredential.user;
     console.log("User>>>",user);
     toast.success("User Created!");
@@ -43,14 +43,14 @@ function SignupSigninComponent() {
     setConfirmPassword("");
     createDoc(user);
     navigate("/dashboard");
-    // ...
+  
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     toast.error(errorMessage)
      setLoading(false);
-    // ..
+    
   });
 }else{
   toast.error("Password and Confirm Password don't match!");
@@ -76,7 +76,7 @@ function SignupSigninComponent() {
     setLoading(false);
     navigate("/dashboard");
     
-    // ...
+    
   })
   .catch((error) => {
     const errorCode = error.code;

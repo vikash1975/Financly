@@ -8,21 +8,21 @@ function Cards({showIncomeModal,showExpenseModal,income,expense,totalBalance}) {
         <Row className="my-row">
             <Card variant={true} className="my-card" >
                 <h2>Current Balance</h2>
-                <p>₹{totalBalance}</p>
+                <p>Rs{totalBalance}</p>
                 <Button text="Reset Button" blue={true}/>
             </Card>
 
 
              <Card variant={true} className="my-card" >
                 <h2>Total Income</h2>
-                <p>₹{income}</p>
+                <p>Rs{income}</p>
                 <Button text="Add Income" blue={true} onClick={showIncomeModal} />
             </Card>
 
 
              <Card variant={true} className="my-card" >
                 <h2>Total Expenses</h2>
-                <p>₹{expense}</p>
+                <p>Rs{expense}</p>
                 <Button text="Add Expense" blue={true} onClick={showExpenseModal} />
             </Card>
             
