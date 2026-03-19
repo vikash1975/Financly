@@ -1,9 +1,4 @@
 
-
-
-
-
-
 import React from "react";
 import "./styles.css";
 import { auth } from "../../Firebase";
@@ -34,47 +29,6 @@ function Header() {
     "User";
 
   return (
-    // <div className="navbar">
-    //   <p className="logo">Financely.</p>
-
-    //   {user && !loading && (
-    //     <div
-    //       style={{
-    //         display: "flex",
-    //         alignItems: "center",
-    //         gap: "1rem",
-    //       }}
-    //     >
-        
-    //       <p style={{ marginRight:"900px",fontWeight: "500", color:"yellow" }}>
-    //         Hi, Welcome back <b>{userName}</b> 
-    //       </p>
-
-
-    //       <img
-    //         src={user?.photoURL ||userImg}
-    //         alt="user"
-    //         referrerPolicy="no-referrer"
-    //         style={{
-    //           borderRadius: "50%",
-    //           height: "1.8rem",
-    //           width: "1.8rem",
-    //           objectFit: "cover",
-    //         }}
-    //       />
-
-    //       <p className="logo link" onClick={logoutFnc}>
-    //         Logout
-    //       </p>
-    //     </div>
-    //   )}
-    // </div>
-    
-
-
-
-
-
   <div className="navbar">
   <p className="logo">Financely.</p>
 
