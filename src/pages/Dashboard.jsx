@@ -132,6 +132,8 @@ let sortedTransactions=transactions.sort((a,b)=>{
   return (
     <div>
       <Header />
+
+      <div className="main-content">
 { loading ? 
 
 (<p>Loading...</p>):(
@@ -163,7 +165,7 @@ let sortedTransactions=transactions.sort((a,b)=>{
 
       </>
       )}
-
+    </div>
     </div>
   )
 }
